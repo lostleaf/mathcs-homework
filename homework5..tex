@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+
+
+\title{
+\bf\ MCS 第5次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document}
+
+
+
+\maketitle
+
+{\bf 1}\\
+What are the eigonvectors and eigonvalues of the matrix 
+$\begin{pmatrix}
+1&1&1&1\\
+1&1&1&1\\
+1&1&1&1\\
+1&1&1&1\\
+\end{pmatrix}$?\\
+特征多项式
+$$|\l{}E-A|=\begin{pmatrix}
+\l-1&-1&-1&-1\\
+-1&\l-1&-1&-1\\
+-1&-1&\l-1&-1\\
+-1&-1&-1&\l-1\\
+\end{pmatrix}=\l^4-4\l^3=0
+$$
+$\Longrightarrow \l=0 \text{或} \l=4$\\
+若$\l=0$，带入$(\l{}E-A)$\\
+$$
+\begin{pmatrix}
+-1&-1&-1&-1\\
+-1&-1&-1&-1\\
+-1&-1&-1&-1\\
+-1&-1&-1&-1\\
+\end{pmatrix}
+$$
+基础解系为
+$$
+\begin{pmatrix}
+1\\-1\\0\\0
+\end{pmatrix},
+\begin{pmatrix}
+1\\0\\-1\\0
+\end{pmatrix},
+\begin{pmatrix}
+1\\0\\0\\-1
+\end{pmatrix}
+$$
+所以属于0的特征向量为
+$$
+k1\begin{pmatrix}
+1\\-1\\0\\0
+\end{pmatrix}+
+k2\begin{pmatrix}
+1\\0\\-1\\0
+\end{pmatrix}+
+k3\begin{pmatrix}
+1\\0\\0\\-1
+\end{pmatrix}
+$$
+若$\l=4$，带入$(\l{}E-A)$\\
+$$
+\begin{pmatrix}
+3&-1&-1&-1\\
+-1&3&-1&-1\\
+-1&-1&3&-1\\
+-1&-1&-1&3\\
+\end{pmatrix}
+$$
+基础解系为
+$$
+\begin{pmatrix}
+1\\1\\1\\1
+\end{pmatrix}
+$$
+属于4的特征向量为
+$$
+k\begin{pmatrix}
+1\\1\\1\\1
+\end{pmatrix}
+$$
+\qed\\
+
+{\bf 4.7}\\
+如果该矩阵$A$第i行代表第i个词，第j列代表第j篇文章，$a_{ij}$表示第i个词在第j篇文章中出现的次数\\
+奇异值分解得$A=UDV^T$\\
+$U$中的每个行向量用于描述每个词，第一个元素表示该词的出现频繁程度，后面的元素与词的相关性有关\\
+$V$中的每个行向量用于描述每篇文章，第一个元素表示该文章中词出现的频度，后面的元素与文章的相关性有关
+\qed\\
+
+{\bf 4.10}\\
+\begin{enumerate}
+\item 
+	$$
+	A^TA=\left( \sum_{i=1}^{r}{\sigma_i\mathbf{v_i}\mathbf{u_i}^T} \right) \left(\sum_{j=1}^{r}{\sigma_j\mathbf{u_j}\mathbf{v_j}^T} \right)
+	=\sum_{1\leq{}i,j\leq{}r}{\sigma_i\sigma_j\mathbf{v_i}\mathbf{u_i}^T\mathbf{u_j}\mathbf{v_j}^T}= \sum_{i=1}^{r}{\sigma_i^2\mathbf{v_iv_i}^T} 
+	$$
+\item
+	$\because A^TA\mathbf{v_i}
+	=\sum_{i=1}^{r}{\sigma_i^2\mathbf{v_iv_i}^T\mathbf{v_i}}
+	=\sigma^2\mathbf{v_i}
+	$\\
+	$\therefore \forall \mathbf{v_i}$是特征向量
+\item
+	$\because$每个奇异值都是$A^TA$的特征值且特征值是唯一确定的\\
+	$\therefore$奇异值唯一
+	{\tiny (原题是在说什么。。)}
+\end{enumerate}
+\qed\\
+
+\end{CJK*}
+\end{document}
+

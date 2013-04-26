@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+\usepackage{graphicx}
+\usepackage{subfigure}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+
+
+\title{
+\bf\ MCS 第6次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+\begin{document}
+
+
+\maketitle
+{\bf 4.25}\\
+原图：    	\includegraphics[width=150pt]{f.jpg}
+保留10\%：   \includegraphics[width=150pt]{u1.jpg}\\
+保留25\%：	\includegraphics[width=150pt]{u2.jpg}
+保留50\%：	\includegraphics[width=150pt]{u3.jpg}\\
+保留10\%的奇异值时，Frobenius norm比值为99.8689\%\\
+保留25\%的奇异值时，Frobenius norm比值为99.9849\%\\
+保留50\%的奇异值时，Frobenius norm比值为99.9997\%\qed\\
+
+{\bf 4.30}\\
+\begin{enumerate}
+	\item 
+	$d_{ij}^2=(x_i-x_j)^T(x_i-x_j)=x_i^Tx_i+x_j^Tx_j-2x_i^Tx_j$\\
+	$\displaystyle \frac{1}{n}\sum_{i=1}^{n}{d_{ij}^2}=
+	\frac{1}{n}\sum_{i=1}^{n}{x_i^Tx_i}+x_j^Tx_j-2\left(\sum_{i=1}^{n}x_i^T\right)x_j$\\
+	质心在原点$\Longrightarrow \displaystyle \sum_{i=1}^{n}x_i^T=\mathbf{0} \Longrightarrow
+	\frac{1}{n}\sum_{i=1}^{n}{d_{ij}^2}=\frac{1}{n}\sum_{i=1}^{n}{x_i^Tx_i}+x_j^Tx_j$\\
+	同理可得$\displaystyle \frac{1}{n}\sum_{j=1}^{n}{d_{ij}^2}=\frac{1}{n}\sum_{j=1}^{n}{x_j^Tx_j}+x_i^Tx_i$\\
+	$\displaystyle \frac{1}{n^2}\sum_{i=1}^{n}\sum_{j=1}^{n}{d_{ij}^2}=\frac{1}{n}\sum_{i=1}^{n}\left(\frac{1}{n}\sum_{j=1}^{n}{x_j^Tx_j}+x_i^Tx_i\right)=\frac{2}{n}\sum_{i=1}^{n}{x_i^Tx_i}$\\
+	$\displaystyle \Longrightarrow -\frac{1}{2}\left( d_{ij}^2-\frac{1}{n}\sum_{i=1}^nd_{ij}^2-\frac{1}{n}\sum_{j=1}^nd_{ij}^2+\frac{1}{n^2}\sum_{i=1}^{n}\sum_{j=1}^{n}{d_{ij}^2} \right)=x_i^Tx_j$
+	
+	\item 由第一问知$X^TX$可构造\\
+	$X^TX$是实对称矩阵 $\Longrightarrow X^TX$正交相似于实对角阵\\
+	令$X^TX=T^TAT$，其中$A$是实对角阵且每个元素是正的，$X$是正交阵\\
+	令$A=B^2,X=BT$ 
+\end{enumerate}
+\qed\\
+{\bf 4.31}\\
+\begin{enumerate}
+	\item 结果如图: \includegraphics[scale=0.4]{l.jpg}
+	\item 
+	取决于航线是否是走的球面最短距离
+\end{enumerate}
+\qed\\
+\end{CJK*}
+\end{document}
+

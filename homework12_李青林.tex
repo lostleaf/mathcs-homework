@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+\usepackage{enumerate,graphicx}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{UTF8}{gbsn}
+\def\half{\dfrac{1}{2}}
+
+\title{
+\bf\ MCS 第12次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document} 
+
+\maketitle
+{\bf 7.21}\\
+	对于$0-9$这十个数字，共有$10^k$中排列\\
+	$\therefore \forall N>10^k+k$，对于集合$S_1,S_2$\\
+	$|S_1|>N,|S_2|>N \Longrightarrow S_1\bigcup{}S_2=S_1\bigcap{}S_2$\\
+	$n\to\infty,resemblance\to 1$
+\qed\\
+
+{\bf 7.22}\\
+	令字母$i$接在字母$j$后面的概率为$p_{ij}$\\
+	令$p_{min}=min\{p_{ij}\}$\\
+	扩充字母表大小为$[1/p_{min}]+1$，每个字母取的概率相等\\
+	则$resemblance$不增加\\
+	类比7.21,新模型下$resemblance=1$\\
+	则原模型下$resemblance=1$
+\qed\\
+
+{\bf 7.23}\\
+	\begin{enumerate}[(a)~]
+		\item 即计算$10000-k\approx{10000}$长度为$k-1$的子串中有两个相同的概率\\
+		$p=1-\dfrac{{100^2}\times{(100^2-1)}\times\cdots\times{(100^2-10000+1)}}{(100^2)^{10000}}
+		\approx{1}$
+		
+		\item 		
+		$p=1-\dfrac{{100^4}\times{(100^4-1)}\times\cdots\times{(100^4-10000+1)}}{(100^4)^{10000}}
+		\approx{0.39}$
+	\end{enumerate}
+\qed\\
+
+{\bf 7.24}\\
+	确定一个$k$\\
+	将两遍文章长度为$k$的子串取出来组成集合$A$与$B$\\
+	计算$resemblance(A,B)$\\
+	如果没有抄袭，$resemblance$很小，反之会很大
+\qed\\
+
+{\bf 7.25}\\
+	确定一个$k$\\
+	将网页$W_i$长度为$k$的子串取出来组成集合$S_i$\\
+	由于网页非常多，只能将$S_i$中的元素哈希之后在存储\\
+	计算$resemblance(hash(S_i),hash(S_j))$\\
+	如果$resemblance$接近于1，$W_i \text{与} W_j$就是重复的
+\qed\\
+
+{\bf 7.27}\\
+	最长的重复子串为"you'll never walk along"\\
+	所以答案是23
+\qed\\
+
+\end{CJK*}
+\end{document}
+

@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+\def\half{\dfrac{1}{2}}
+
+\title{
+\bf\ MCS 第8次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document}
+
+\maketitle
+
+{\bf 5.42}\\
+	即$p_1=\dfrac{1}{2} \qquad p_2=\dfrac{1}{3} \qquad p_3=\dfrac{1}{6}$\\
+	$p_{12}=\dfrac{1}{2}\cdot\dfrac{p_2}{p_1}=\dfrac{1}{3}\qquad 
+	p_{13}=\dfrac{1}{2}\cdot\dfrac{p_3}{p_1}=\dfrac{1}{6}\qquad
+	p_{11}=1-p_{12}-p_{13}=\dfrac{1}{2}$
+
+	$p_{21}=\dfrac{1}{2}\cdot 1=\dfrac{1}{2}\qquad 
+	p_{23}=\dfrac{1}{2}\cdot\dfrac{p_3}{p_2}=\dfrac{1}{4}\qquad
+	p_{22}=1-p_{2`}-p_{23}=\dfrac{1}{4}$
+
+	$p_{32}=\dfrac{1}{2}\cdot 1=\dfrac{1}{2}\qquad 
+	p_{31}=\dfrac{1}{2}\cdot 1=\dfrac{1}{2}\qquad
+	p_{33}=1-p_{32}-p_{31}=0$
+\qed\\
+
+
+{\bf 5.44}\\
+	即$p_{00}=\dfrac{1}{2} \qquad p_{01}=0 \qquad p_{10}=0 \qquad p_{11}=\dfrac{1}{2}$
+	
+	$p_{00,01}=\dfrac{1}{2}\cdot p(x_2=1|~x_1=0)=0 \qquad 
+	p_{00,10}=\dfrac{1}{2}\cdot p(x_1=1|~x_2=0)=0$
+	
+	$p_{01,00}=\dfrac{1}{2}\cdot p(x_2=0|~x_1=0)=\half \qquad  
+	p_{01,11}=\dfrac{1}{2}\cdot p(x_1=1|~x_2=1)=\half$
+	
+	$p_{10,00}=\dfrac{1}{2}\cdot p(x_1=0|~x_2=0)=\half \qquad  
+	p_{10,11}=\dfrac{1}{2}\cdot p(x_2=1|~x_1=1)=\half$
+	
+	$p_{11,01}=\dfrac{1}{2}\cdot p(x_1=0|~x_2=1)=0\qquad 
+	p_{11,10}=\dfrac{1}{2}\cdot p(x_2=0|~x_1=1)=0$
+\qed\\
+
+
+{\bf 5.28}\\
+	令$r$表示restart value\\
+	初始时$\pi_i=(1-r)\pi_jp_{ji}$\\
+	设加了$n$个环\\
+	$
+		\left\{
+			\begin{aligned}
+				\pi_i&=(1-r)\pi_jp_{ji}+n(1-r)\pi_k\\
+				\pi_k&=\dfrac{1-r}{n+1}\pi_i
+			\end{aligned}
+		\right.
+	$
+	
+	$\Longrightarrow\pi_i=\dfrac{(n+1)}{2nr-nr^2-1}\cdot{}(1-r)\pi_jp_{ji}$\\
+	$\displaystyle \lim_{n \to \infty}\pi_i=\dfrac{1}{2r-r^2}\cdot{}(1-r)\pi_jp_{ji}$\\
+	即当加点环足够多的时候page rank会变成$\dfrac{1}{2r-r^2}$倍
+\qed\\
+
+
+\end{CJK*}
+\end{document}
+

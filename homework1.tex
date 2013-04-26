@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+
+
+\title{
+\bf\ MCS 第一次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document}
+
+
+
+\maketitle
+
+{\bf 2.11}\\
+对$\forall{d}\in{\mathbf{N}}$\\
+若$d=2k(k\in{\mathbf{N}})~~~~~~~ \Gamma(d)=(k-1)!$\\
+若$d=2k+1(k\in{\mathbf{N}})~~ \Gamma(d)=(k-1)!\sqrt{\pi}$\\
+则对于$\forall{d}=2k,V(d)=\dfrac{\pi^{k}}{k*(k-1)!}=\dfrac{\pi^k}{k!} $\\
+对于$\forall{d}=2k+1,V(d)=\dfrac{\pi^{k+1/2}}{\pi^{1/2}*(k+1/2)*\prod_{i=1}^{k}(i-\frac{1}{2})}=
+\dfrac{\pi^k}{\prod_{i=1}^{k+1}(i-\frac{1}{2})}$\\
+~\newline$\therefore$
+$\dfrac{V(2k+2)}{V(2k)}=\dfrac{\pi}{k+1}$~~~~~~~~
+$\dfrac{V(2k+3)}{V(2k+1)}=\dfrac{\pi}{k+3/2}$\\
+$\therefore k=3$时,$V(2k)$最大~~~$k=2$时$V(2k+1)$最大\\
+$\therefore V_{max}=$Max$\left( V(5),V(6) \right)=\dfrac{8\pi^2}{15}$
+\hfill$\Box$\\
+
+
+~\\~\\
+{\bf 2.12}\\
+$V(r,d)=r^d\dfrac{\pi^{d/2}}{\frac{d}{2}\Gamma(\frac{d}{2})}$\\
+当$r=2$时,体积先增加，再减小，最后收敛于0\\
+当$r\neq2$但为常数时,同上\\
+若$V(r,d)\equiv{}v,r=\left({\dfrac{vd~\Gamma(\frac{d}{2})}{2\pi^{d/2}}}\right)^\frac{1}{d}$
+\hfill$\Box$\\
+
+
+
+~\\~\\
+{\bf 2.17}\\
+令$f(x)$表示圆柱体积,设高度为h\\
+底面积为$(1-h^2)^{\frac{d-1}{2}}V(d-1)$\\
+$f(x)=h(1-h^2)^{\frac{d-1}{2}}V(d-1)$\\
+当$f(x)'=(1-h^2)^{\frac{d-3}{2}}(1-dh^2)V(d-1)=0$时,$f(x)$取极大值\\
+得$h=\frac{1}{\sqrt{d}}$或$h=1$\\
+$\because{}h=1,f(1)=0$,不可能为极大值\\
+$\therefore{}h=\frac{1}{\sqrt{d}}$时,f(x)取极大值
+\hfill$\Box$\\
+
+
+
+~\\~\\
+{\bf 2.20}\\
+$\forall{\epsilon>0}$，令$S=\{x|x$到赤道的距离不超过$\epsilon\}$\\
+当$d\to\infty$,$S\to$整个球\\
+因而，当维数足够大时，任意一个赤道周围都聚集绝大部分的点，可以任选北极
+\hfill$\Box$
+
+
+\end{CJK*}
+\end{document}
+

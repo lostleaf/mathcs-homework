@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+
+
+\title{
+\bf\ MCS 第4次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+\begin{document}
+
+
+\maketitle
+
+{\bf 3.48}\\
+随机选一个点，在大小为$k$的联通块里的概率为$\dfrac{kx_k}{n}$\\
+$E=\displaystyle \frac{1}{n} \sum_{i=1}^{n}{ix_i}$
+\qed\\
+
+{\bf 3.51}\\
+当$n$很大时$i$很小时，二项分布近似于泊松分布\\
+$\because\displaystyle 1-(1-\frac{d}{n})^i\approx{}\frac{id}{n}$\\
+$\therefore$该二项分布可以看成$\lambda=id$的泊松分布\\
+$\displaystyle P(x=i)=e^{-id}\frac{i^id^k}{i!}=e^{-id}\frac{i^id^k}{i^i}e^i=e^{-(d-1-\mathrm{ln}d)i}$\\
+因而概率随i指数级下降，则只会分布在$[0,c_1log(n)]$范围内\\
+如果$i=\Omega(n)$，该二项分布近似正态分布\\
+令$k=|\Theta{}n-i|,k$必须很小才能保证概率不为零\\
+该分布下降正比于$e^{-k^2/\sigma^2}$，其中标准差$\sigma$正比于$\sqrt{n}$\\
+$\therefore[\Theta{n}-c_2\sqrt{n},\Theta{n}+c_2\sqrt{n}]$区间内不为零
+\qed\\
+
+{\bf 3.52}\\
+$f'(x)=de^{-dx}-1=0 \qquad f''(x)=-d^2e^{-dx}\leq0$\\
+$\Longrightarrow{}x_{max}=\dfrac{\mathrm{ln}d}{d}$\\
+$f(x_{max})=-\dfrac{\mathrm{ln}d+1}{d}+1$\\
+$x_{max}=\dfrac{i_{max}}{n} \Longrightarrow i_{max}=nx_{max}=\dfrac{n\mathrm{ln}d}{d}$
+\qed\\
+\end{CJK*}
+\end{document}
+

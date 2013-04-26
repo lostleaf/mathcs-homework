@@ -1,0 +1,107 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+
+
+\title{
+\bf\ MCS 第3次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document}
+
+
+
+\maketitle
+{\bf 3.27}\\
+对于一个有三个点$v_1,v_2,v_3$的图\\
+第一份包含$(v_1,v_2),(v_1,v_3)$两条边\\
+第二份包含$(v_2,v_3)$一条边\\
+生成的两个图都没有三角形\\
+求并集,包含$(v_1,v_2),(v_1,v_3),(v_2,v_3)$三条边，含有三角形
+\qed\\
+
+{\bf 3.28}\\
+如果Q是一个递增性质(increasing property)，指性质Q满足对于集合S，如果集合S满足Q性质，在S中加一个数形成的结合仍满足Q性质\\\\
+令$p(n)$表示最小实数$a$,使得$N(n,a)$有$\frac{1}{2}$的概率满足Q性质\\
+对于任意函数$p_0(n)$满足$$\lim_{n \to \infty}\dfrac{p_0(n)}{p(n)}=0$$
+假设$ N(n,p_0(n)) $满足Q性质的概率不收敛于0\\
+那么，$\exists\varepsilon>0$，$n\rightarrow\infty$时，$N(n,p_0(n))$满足Q性质的概率至少为$\varepsilon$\\
+令$m=\lceil 1/\varepsilon \rceil$\\
+令$H$为$G(n,p_0(n))$的m-fold replication\\
+则$H$不满足性质Q的概率至多为$(1-\varepsilon)^m\leq\frac{1}{2}$\\
+$\therefore{}mp_0(n)\geq{}p(n)$，与$\lim_{n \to \infty}\dfrac{p_0(n)}{p(n)}=0$矛盾\\
+于是$G(n,p_0(n))$几乎不满足性质Q\\
+同理对于$\lim_{n \to \infty}\dfrac{p(n)}{p_1(n)}=0$,$G(n,p_1(n))$几乎满足性质Q\qed\\
+
+{\bf 2.29}\\
+1.$$(1-p)^{\sqrt{n}}=1/2$$ $$p=1-2^{-\sqrt{n}}$$
+2.$$(1-p)^{\sqrt[3]{n}}=1/2$$ $$p=1-2^{-\sqrt[3]{n}}$$
+3.$$(1-p)^{n/2}=1/2$$ $$p=1-2^{n/2}$$
+4.共有$\Theta(n^2)$对三元组$(x,y,z)$满足$x+y=z$，每一对三元组出现的概率为$p^3$，三元组数的期望为$\Theta(n^2p^3)$，要使$\Theta(n^2p^3)=\Theta(1)$，必须有$p^3=\Theta(n^2)$，$p=\Theta(n^{-2/3})$\qed\\
+
+{\bf 3.40}\\
+当$k=3$时，$\dfrac{1}{e}-(1-\dfrac{1}{2^k})^{2^k}=0.0243$\\
+当$k=5$时，$\dfrac{1}{e}-(1-\dfrac{1}{2^k})^{2^k}=0.0058$\\
+当$k=7$时，$\dfrac{1}{e}-(1-\dfrac{1}{2^k})^{2^k}=0.0014$\\
+与理论值$\displaystyle \lim_{x \to \infty}=\frac{1}{e}$是相符的\qed\\
+\end{CJK*}
+\end{document}
+

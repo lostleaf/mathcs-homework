@@ -1,0 +1,184 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+\usepackage{enumerate,graphicx}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+\def\ra{\rightarrow} \def\Lra{\Longrightarrow}
+
+\title{
+\bf\ MCS 第7次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document}
+
+
+\maketitle
+
+
+{\bf 5.1}\\
+\begin{enumerate}[a.~]
+	\item ~\newline \includegraphics[scale=0.4]{a.jpg}
+	\item 
+		充分性：\\
+		假设二分图存在奇环，设奇环为$v_1\ra{}v_2\ra{}v_3\ra\cdots\ra{}v_m\ra{}v_1$\\
+		不妨设$v_1$属于左半集$\Lra v_n$属于左半集$\Lra v_1$属于右半集，矛盾\\
+		
+		必要性：\\
+		假设一个不存在奇环的图不是二分图，则它不可以黑白染色\\
+		$\Lra \exists u_s,u_t$\\
+		从$u_s$沿$u_s\ra{u_1}\ra{u_2}\ra\cdots\ra{u_n}\ra{u_t}$得$u_t$被染成白色\\
+		从$u_s$沿$u_s\ra{v_1}\ra{v_2}\ra\cdots\ra{v_m}\ra{u_t}$得$u_t$被染成黑色\\
+		则$u_s\ra{u_1}\ra{u_2}\ra\cdots\ra{u_n}\ra{u_t}\ra{v_m}\ra\cdots\ra{v_1}\ra{u_s}$是奇环，矛盾\\
+	\item
+		假如最后到每个点的概率收敛，设第$n$步落在$i$点的概率为$P(n,i)$\\
+		必有$\forall{n} \sum_{i=1}^{|E|}P(n,i)=1$\\
+		$\displaystyle\Lra \exists x, \lim_{n \to \infty}P(n,x)>0$\\
+		$\displaystyle\Lra \exists N, \forall n>N P(n,x)>0$\\
+		由于该图是二分图，$P(n,x)$要么在$n$为奇数是为零，要么在$n$为偶数时为零，矛盾\\
+\end{enumerate}
+\qed\\
+
+{\bf 5.3}\\
+	设左边和右边的电势差为U\\
+	$I_1=\dfrac{U}{R_1+R_3}$\\
+	$I_2=\dfrac{U}{R_2}$\\
+	$I_{eff}=\dfrac{U}{I_1+I_2}=\dfrac{(R1+R3)R_2}{R1+R3+R2}$
+\qed\\
+
+{\bf 5.5}
+	\begin{enumerate}[(a)~]
+		\item 
+			$\dfrac{u_c-u_a}{1}+\dfrac{u_c-u_b}{2}+\dfrac{u_c-u_d}{1}=0$\\
+			$\dfrac{u_d-u_a}{2}+\dfrac{u_d-u_b}{1}+\dfrac{u_d-u_c}{1}=0$
+			$u_c=\dfrac{4}{7}\quad u_d=\dfrac{3}{7}$
+		\item
+			$I_{ac}=\dfrac{u_a-u_c}{1}=\dfrac{3}{7}$\\
+			$I_{ad}=\dfrac{u_a-u_d}{2}=\dfrac{2}{7}$\\
+			$I_{cd}=\dfrac{u_c-u_d}{1}=\dfrac{1}{7}$\\
+			$I_{cb}=\dfrac{u_c-u_d}{2}=\dfrac{2}{7}$\\
+			$I_{db}=\dfrac{u_d-u_b}{1}=\dfrac{3}{7}$
+		\item
+			$R_{eff}=\dfrac{u_a-u_b}{I_{eff}}=\dfrac{u_a-u_b}{I_{ac}+I_{ad}}=\dfrac{7}{5}$
+		\item
+			$p_{ad}=\dfrac{1}{3} \quad p_{ac}=\dfrac{2}{3}$\\
+			$p_{ca}=\dfrac{2}{5} \quad p_{cb}=\dfrac{1}{5} \quad p_{cd}=\dfrac{2}{5}$\\
+			$p_{da}=\dfrac{1}{5} \quad p_{db}=\dfrac{2}{5} \quad p_{dc}=\dfrac{2}{5}$\\
+			$p_{bc}=\dfrac{1}{3} \quad p_{bd}=\dfrac{2}{3}$
+		\item
+			$u_c=\dfrac{4}{7}\quad u_d=\dfrac{3}{7}$
+		\item
+			$i_{cd}=\dfrac{1}{7}$
+		\item
+			由于足够多步之后在$c\leftrightarrow{d}$打圈的概率足够小\\
+			$p=1-p_{escape}=1-\dfrac{1}{r_{eff}c_a}=\dfrac{11}{21}$
+	\end{enumerate}
+\qed\\
+
+{\bf 5.9}\\
+	不妨将$u$标号为$1$，$v$标号为$n$，令$h(i)$表示$i$到$v$的"hitting time"\\
+	$
+		\left\{
+	   		\begin{aligned}
+				h(1)&=1+\dfrac{h(2)}{2}\\
+				h(i)&=1+\dfrac{h(i-1)+h(i+1)}{2} \quad (2\leq{i}\leq{n-1}) \\
+				h(n)&=0
+   			\end{aligned}
+   		\right.
+	$\\
+	解方程得$h(1)=n-1$\\
+	即$h_{uv}=n-1$\\
+	如果去掉$(u,v)$，变成一条链，$h_{uv}=(n-1)^2$
+\qed\\
+
+{\bf 5.10}\\
+	\includegraphics[scale=0.5]{b.jpg}\\
+	首先如图标号\\
+	\newpage
+	对于第一个图\\
+	$
+		\left\{
+			\begin{aligned}
+				h_{uv}&=1+\dfrac{h_{av}+h_{bv}}{3}\\
+				h_{av}&=1+h_{uv}\\
+				h_{bv}&=1+h_{uv}\\
+			\end{aligned}
+		\right.	
+	$\\
+	$h_{uv}=5$\\
+	
+	对于第二个图\\
+	$
+		\left\{
+			\begin{aligned}
+				h_{uv}&=1+\dfrac{h_{av}+h_{bv}}{3}\\
+				h_{av}&=1+\dfrac{h_{uv}+h_{cv}}{2}\\
+				h_{cv}&=1+h_{av}\\
+				h_{bv}&=1+h_{uv}\\
+			\end{aligned}
+		\right.			
+	$\\
+	$h_{uv}=7$\\
+	
+	对于第三个图(书上的u、v画反了吧。。。)\\
+	$h_{uv}=1$
+\qed\\
+\end{CJK*}
+\end{document}
+

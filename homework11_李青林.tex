@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+\usepackage{enumerate,graphicx}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{GBK}{song}
+\def\half{\dfrac{1}{2}}
+
+\title{
+\bf\ MCS 第11次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+
+
+\begin{document} 
+
+\maketitle
+
+{\bf 7.6}\\
+	$\displaystyle Prob\Big(h(x)=z\Big)=\sum_{i=0}^M{Prob\Big(h(x)=z,h(y)=i\Big)}$\\
+	$\because \forall ~Prob\Big(h(x)=z,h(y)=w\Big)=\dfrac{1}{(M+1)^2}$\\
+	$\therefore Prob\Big(h(x)=z\Big)=\dfrac{1}{M+1}$
+\qed\\
+
+
+{\bf 7.7}\\
+	\begin{enumerate}[(a)~]
+		\item 	
+			不是\\
+			$
+				\left\{
+					\begin{aligned}
+						ax+b&=u\\
+						ay+b&=v\\
+						az+b&=w
+					\end{aligned}
+				\right.			
+			(mod M)$
+			可能无解
+		\item 
+			可以用圆锥曲线，例如抛物线\\
+			$H=\big\{h_{abc}(x)=ax^2+bx+c|0\leq{}a,b,c\leq{q-1} \big\}$
+	\end{enumerate}
+\qed\\
+
+{\bf 7.8}\\
+	$H=\big\{h_a(x)=ax|0\leq{}a\leq{q-1} \big\}$\\
+	$q$为某个素数
+\qed\\
+\newpage
+{\bf 7.10}\\
+	令$p_i$表示扔了$i$次硬币才扔出正面的概率\\
+	$p_i=\left(1-p\right)^{i-1}p$\\
+	$\displaystyle E=\sum_{i=1}^{\infty}ip_i=\sum_{i=1}^{\infty}i\left(1-p\right)^{i-1}p=\frac{1}{p}$
+\qed\\
+
+{\bf 7.12}\\
+	反例：$1,1,2,3,4$
+\qed\\
+\end{CJK*}
+\end{document}
+

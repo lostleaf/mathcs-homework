@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath,amssymb,CJK}
+\usepackage{enumerate,graphicx}
+%\usepackage{Latexcad}
+\openup 7pt\pagestyle{plain} \topmargin -40pt \textwidth
+14.5cm\textheight 21.5cm
+\parskip .09 truein
+\baselineskip 4pt\lineskip 4pt \setcounter{page}{1}
+\def\a{\alpha}\def\b{\beta}\def\d{\delta}\def\D{\Delta}\def\fs{\footnotesize}
+\def\g{\gamma}
+\def\G{\Gamma}\def\l{\lambda}\def\L{\Lambda}\def\o{\omiga}\def\p{\psi}
+\def\se{\subseteq}\def\seq{\subseteq}\def\Si{\Sigma}\def\si{\sigma}\def\vp{\varphi}\def\es{\varepsilon}
+\def\sc{\scriptstyle}\def\ssc{\scriptscriptstyle}\def\dis{\displaystyle}
+\def\cl{\centerline}\def\ll{\leftline}\def\rl{\rightline}\def\nl{\newline}
+\def\ol{\overline}\def\ul{\underline}\def\wt{\widetilde}\def\wh{\widehat}
+\def\rar{\rightarrow}\def\Rar{\Rightarrow}\def\lar{\leftarrow}
+\def\Lar{\Leftarrow}\def\Rla{\rightleftarrow}\def\bs{\backslash}
+\def\ra{\rangle}\def\la{\langle}\def\hs{\hspace*}\def\rb{\raisebox}
+\def\ni{\noindent}\def\hi{\hangindent}\def\ha{\hangafter}
+\def\vs{\vspace*}
+\def\hom#1{\mbox{\rm Hom($#1,#1$)}}
+\def\thebeg{\vskip8pt\par\ni}
+\def\theend{\vskip5pt\par}
+\def\chabeg{\pagebreak\par}
+\def\chaend{\vskip20pt\par}
+\def\secbeg{\vskip15pt\par}
+\def\secend{\vskip10pt\par}
+\def\exebeg{\vskip10pt}
+\def\exeend{\vskip6pt}
+\def\undot#1{\mbox{$\mbox{#1}\hs{-1.5ex}_{_{\dis\centerdot}}\,\,$}}
+\def\qed{\hfill\mbox{$\Box$}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ii{\mbox{\,{\bf i}\,}}
+\def\jj{\mbox{\,{\bf j}\,}}
+\def\AA{{\cal A}}
+\def\BB{{\cal B}}
+\def\DD{{\cal D}}
+\def\EE{{\mbox{\bf 1}}}
+\def\OO{{\mbox{\bf 0}}}
+\def\kk{{\mbox{\bf k}}}
+\def\R{\mathbb{R}}
+\def\F{\mathbb{F}{\ssc\,}}
+%\def\similar{\rb{-4pt}{\mbox{\,\~\,}}}
+\def\similar{\backsim}
+\def\Llra{\Longleftrightarrow}
+\def\Lra{\Longrightarrow}
+\def\Lla{\Longleftarrow}
+\def\mat#1#2{\mbox{$\left(\begin{array}{#1}#2\end{array}\right)$}}
+\def\det#1#2{\mbox{$\left|\begin{array}{#1}#2\end{array}\right|$}}
+\def\eset{\emptyset}
+\parindent=5ex
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\newtheorem{Example}{\text{例}}
+\begin{CJK*}{UTF8}{gbsn}
+\def\half{\dfrac{1}{2}}
+
+\title{
+\bf\ MCS 第13次作业}
+
+\author{{李青林\thanks{jack951753@gmail.com}}
+ }
+
+\begin{document} 
+
+\maketitle
+
+{\bf 6.1}\\
+	令$w=(1,1,\cdots,1,-\frac{1}{2})$\\
+	令$k_i$表示$a_i$中非零元素的个数,显然$1\leq{}k_i\leq{d+1}$\\
+	$\delta=min\left\{\left|\dfrac{w\cdot{}a_i}{|w|}\right|\right\}=\dfrac{\sqrt{k_i}}{\sqrt{d+1/4}}$\\
+	$\Longrightarrow\delta=\Omega(\dfrac{1}{\sqrt{d}})=\Omega(\dfrac{1}{d})$
+\qed\\
+
+{\bf 6.4}\\
+	不妨设有偶数分量为1时标记为$-1$,奇数个时为$+1$
+	反之存在$w,b$\\
+	使
+  	$
+  		\quad
+  		\left\{
+	   		\begin{aligned}
+   				\overset{}
+   				w\cdot{}(0,0,0,0,\cdots,0)<b\\
+				w\cdot{}(1,1,0,0,\cdots,0)<b\\
+				w\cdot{}(0,1,0,0,\cdots,0)>b\\
+				w\cdot{}(1,0,0,0,\cdots,0)>b
+   			\end{aligned}
+   		\right.
+   	$
+   	成立\\
+   	$\Longrightarrow 0>b>0 $，矛盾
+\qed\\
+
+{\bf 6.13}\\
+	令$\varphi(x1,x2)=x_1^2+x_2^2$\\
+	以半径的平方做线性分割即可
+\qed\\
+
+{\bf 6.19}\\
+	根据条件，不可能将所有的点正确分类\\
+	但该strong learner可以讲大部分的点正确分类
+\qed\\
+
+{\bf 6.21}\\
+	首先收缩$C_1$的半径，使得包含在内的一个点$p$到圆周上\\
+	如果此时存在第二个点也在圆周上，$C_2$已找到\\
+	否则$p$不动，圆心动，缩短$p$到圆心的距离知道第二个点在圆周上\\
+	即找到$C_2$
+\qed\\
+\end{CJK*}
+\end{document}
+
